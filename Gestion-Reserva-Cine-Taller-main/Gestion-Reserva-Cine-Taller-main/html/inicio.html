@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" type="text/css" href="ckc.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iniciar Sesion</title>
+  <link rel="stylesheet" href="../css/inicio estilo.css">
+  <link rel="stylesheet" href="cl-icon/css/all.min.css">
+</head>
+<body>
+  <div class="wrapper">
+    <form action="" class="form">
+      <img class="logo" src="../logo/logo (2).png" alt="logo">
+      <h1 style="color: rgb(185 28 28); position: absolute; top: 149px;"></h1>         
+      <div class="inp">
+        <input type="text" name="" id="" class="input" placeholder="Usuario">
+        <i class="fa-solid fa-user"></i>
+      </div>
+      <div class="inp">
+        <input type="password" name="" id="" class="input" placeholder="Contraseña">
+        <i class="fa-solid fa-lock"></i>
+      </div>
+      <button class="submit">Iniciar Sesión</button>
+      <p class="footer">¿No tienes cuenta? <a href="RegistroClientes.html" class="link"> Registrate</a></p>
+    </form>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const form = document.querySelector('.form');
+      const userInput = form.querySelector('input[type="text"]');
+      const passwordInput = form.querySelector('input[type="password"]');
+      const submitButton = form.querySelector('.submit');
+
+      form.addEventListener('submit', function (event) {
+        event.preventDefault(); // Prevenir que el formulario se envíe por defecto
+
+        // Validar que los campos no estén vacíos
+        if (userInput.value.trim() === '') {
+          alert('Por favor, ingrese su nombre de usuario');
+          userInput.focus();
+          return;
+        }
+
+        if (passwordInput.value.trim() === '') {
+          alert('Por favor, ingrese su contraseña');
+          passwordInput.focus();
+          return;
+        }
+
+        // Si la validación es exitosa
+        alert('Inicio de sesión exitoso!');
+
+        // Aquí puedes agregar lógica para enviar el formulario a un servidor o procesar los datos
+      });
+    });
+  </script>
+</body>
+</html>
+
+
+ 
+
